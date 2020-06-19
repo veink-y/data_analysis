@@ -21,7 +21,7 @@ jobs:
         username: ${{ secrets.SFTP_USER }}
         password: ${{ secrets.ALI_PASSWORD }}
         port: ${{ secrets.ALI_PORT }}
-        rm: true
+        rm: 1
         source: "./*"
         target: ${{ secrets.SCP_PATH }}
 
