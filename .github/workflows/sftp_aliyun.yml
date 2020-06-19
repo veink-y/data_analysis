@@ -20,11 +20,11 @@ jobs:
         host: ${{ secrets.ALI_IP }}
         username: ${{ secrets.SFTP_USER }}
         password: ${{ secrets.ALI_PASSWORD }}
-        port: ${{ secrets.ALI_PORT }}
+        port: 22
         rm: 1
         source: "./*"
-        target: ${{ secrets.SCP_PATH }}
-
+        target: "/www/wwwroot/vein.ink/"
+        
     # - name: deploy file
     #     uses: wlixcc/SFTP-Deploy-Action@v1.0
     #     with:
