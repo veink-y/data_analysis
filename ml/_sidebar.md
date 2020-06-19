@@ -5,7 +5,7 @@
   * [保存模型](/ml/docs/baocunmoxing.md)
   * [特征工程](/ml/docs/te-zheng-gong-cheng.md)
   * [调参](/ml/docs/tiaocan.md)
-  * [google Colaboratory 使用lightgbm-gpu](docs/googleColab-lightgbm-gpu.md)
+  * [google Colaboratory 使用lightgbm-gpu](/ml/docs/googleColab-lightgbm-gpu.md)
 * keras
   * 
 * pytorch
