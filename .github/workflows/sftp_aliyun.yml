@@ -7,7 +7,7 @@ on:
       branches:
         - master
 jobs:
-  FTP-Deploy-Action:
+  SCP-Deploy-Action:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
@@ -20,9 +20,10 @@ jobs:
         host: ${{ secrets.ALI_IP }}
         username: ${{ secrets.SFTP_USER }}
         password: ${{ secrets.ALI_PASSWORD }}
-        port: 22
+        port: ${{ secrets.ALI_PORT }}
+        rm: true
         source: "./*"
-        target: "/www/wwwroot/vein.ink/"
+        target: ${{ secrets.SCP_PATH }}
 
     # - name: deploy file
     #     uses: wlixcc/SFTP-Deploy-Action@v1.0
