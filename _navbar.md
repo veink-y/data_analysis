@@ -1,0 +1,5 @@
+- [Home](/python/)
+- [Linux](/linux/)
+- [Mechine Learning](/ml/)
+- [Work](/product/)
+- [Profile](/profile/)

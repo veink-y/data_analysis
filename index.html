@@ -22,15 +22,17 @@
     }
 
     window.$docsify = {
-      name: '数据分析笔记本',
-      repo: '',
-      // maxLevel: 5,//最大支持渲染的标题层级
-      subMaxLevel: 2,
-      coverpage: false,//封面,_coverpage.md
+      // name: '数据分析笔记本',
+      maxLevel: 5,//最大支持渲染的标题层级
+      coverpage: true,//封面,_coverpage.md
+      onlyCover: false,
       autoHeader: true,
       homepage: 'README.md',
+      loadNavbar: true,
       loadSidebar: true,
+      subMaxLevel: 2,
       auto2top: true,//切换页面后是否自动跳转到页面顶部
+      topMargin: 90,
       //ga: 'UA-138586553-1',
       //logo: 'https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-3logo-透明.png' ,
       search: {
@@ -52,7 +54,7 @@
             } else {
               url = 'https://github.com/yhf2lj/docsify_data_analysis/tree/master/' + vm.route.file
             }
-            var editHtml = '[:memo: Edit Document](' + url + ')\n'
+            var editHtml = '[:memo: Edit Document](' + url + ')\n\n'
             
             return editHtml
               + html
