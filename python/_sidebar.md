@@ -10,7 +10,7 @@
   * pyspark DataFrame常用
 
 * 可视化
-  * [CentOS 安装superset](/python/docs/supersetan-zhuang-guo-cheng.md)
+  * [CentOS 安装superset](/python/docs/superset-install.md)
 
 * SQL
   * [SQL基础](/python/docs/sqljichu.md)
