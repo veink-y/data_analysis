@@ -1,4 +1,6 @@
-```py
+## pymysql连接
+
+```python
 import pymysql
 # 打开数据库链接
 connection = pymysql.connect(host='localhost',
@@ -18,19 +20,18 @@ cursor.execute(sql2)
 
 2
 
-```py
+```python
 # 获取查询结果
-results = cursor.fetchall() 
-results
+cursor.fetchall() 
 ```
 
 \(\('02', '钱电', '1990-12-21', '男', '02', '01', 70, '02', '02', 60\),
 
 \('04', '李云', '1990-08-06', '男', '04', '01', 50, '04', '02', 30\)\)
 
-```py
+```python
 # 关闭数据库
-connection.close
+connection.close()
 ```
 
 

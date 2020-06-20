@@ -1,5 +1,5 @@
 
-方法1： joblib
+## 方法1： joblib
 
 ```python
 from sklearn.externals import joblib #jbolib模块
@@ -16,7 +16,7 @@ print(clf3.predict(X[0:1]))
 
 
 
-方法2：pickle
+## 方法2：pickle
 
 ```python
 import pickle #pickle模块

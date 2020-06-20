@@ -22,9 +22,9 @@ RandomForestClassifier(
     )
 ```
 
-### 参数解释
+## 参数解释
 
-```python
+
 参数(params)：
     n_estimators:数值型取值
         含义：森林中决策树的个数，默认是10
@@ -79,13 +79,11 @@ RandomForestClassifier(
         含义：如果没有给定这个值，那么所有类别都应该是权重1
         对于多分类问题，可以按照分类结果y的可能取值的顺序给出一个list或者dict值，用来指明各类的权重.
         "balanced"模式，使用y值自动调整权重，该模式类别权重与输入数据中的类别频率成反比，
-即n_samples / (n_classes * np.bincount(y))，分布为第n个类别对应的实例数。
-        "balanced_subsample"模式和"balanced"模式类似，只是它计算使用的是有放回式的取样中取得样本数，而不是总样本数
-```
+        即n_samples / (n_classes * np.bincount(y))，分布为第n个类别对应的实例数。
+        "balanced_subsample"模式和"balanced"模式类似，只是它计算使用的是有放回式的取样中取得样本数，
 
-### 参数属性
+## 参数属性
 
-```py
 属性：
     estimators_:决策树列表
         拟合好的字分类器列表，也就是单个决策树
@@ -110,11 +108,11 @@ RandomForestClassifier(
 
     oob_decision_funtion_:array of shape = [n_features, n_classes]
         oob样本预测结果，每一个样本及相应结果对列表
-```
 
-### 参数方法
 
-```py
+## 参数方法 
+
+
 方法：
     apply(X):用构造好的森林中的树对数据集X进行预测，返回每棵树预测的叶子节点。所以结果应该是二维矩阵，
 行为样本第几个样本，列为每棵树预测的叶子节点。 
@@ -143,7 +141,7 @@ RandomForestClassifier(
     score(X, y[,sample_weight]):返回给定的数据集（数据集指定了类别）的预测准确度
 
     set_params(**params):设置决策树的参数
-```
+
 
 
 

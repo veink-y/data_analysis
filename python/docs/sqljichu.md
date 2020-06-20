@@ -1,34 +1,17 @@
 
 mysql面试题：[mysql面试题](https://kl66.top/2019/05/23/mysql面试题/)
 
-##### 常见的存储引擎：
+### 常见的存储引擎：
 
 MyISAM、InnoDB、MERGE、MEMORY(HEAP)、BDB(BerkeleyDB)等，以及最常用的MyISAM与InnoDB两个引擎
 
 InnoDB（mysql5.5以后默认使用）
 
-##### 授权
-
-```
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'WITH GRANT OPTION;
-FLUSH PRIVILEGES;
-```
-
- 
-
-turncate 语句 删除数据表中所有行
-
-drop 删除表，列
-
-delete 删除行
 
 
+## 数据库知识笔记
 
 utf8mb4比utf8多了emoji编码支持.
-
-
-
-# 数据库知识笔记
 
 分析型数据库：OLAP（联机分析处理）
 

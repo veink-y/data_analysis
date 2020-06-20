@@ -1,4 +1,4 @@
-### One-hot编码
+## One-hot编码
 
 ```py
 pandas.get_dummies(data)
@@ -6,7 +6,7 @@ pandas.get_dummies(data)
 
 
 
-### 特征选择
+## 特征选择
 
 ```python
 from sklearn.feature_selection import SelectFromModel
@@ -28,7 +28,7 @@ feature_name
 
 
 
-### 拉格朗日插值法
+## 拉格朗日插值法
 
 
 

@@ -1,4 +1,4 @@
-### 行列转换：
+## 行列转换：
 
 ```sql
 SELECT s_id,max(case c_id when '01' then s_score else 0 END) AS c_id_01,
@@ -10,9 +10,9 @@ GROUP BY s_id
 ORDER BY AVG(s_score) DESC
 ```
 
-### 
 
-### SQL通配符
+
+## SQL通配符
 
 
 

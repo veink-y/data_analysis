@@ -1,5 +1,5 @@
 
-## 1.superset介绍
+## superset介绍
 
 superset是airbnbd开源的BI面板，基于python框架，集成了Flask、D3、Pandas、SqlAlchemy等框架。
 
@@ -7,7 +7,7 @@ superset是airbnbd开源的BI面板，基于python框架，集成了Flask、D3�
 
 下载链接： [https://share.weiyun.com/51VMwBe](https://share.weiyun.com/51VMwBe)  密码：dahpkn
 
-## 2.虚拟机centos最小化安装
+## 虚拟机centos最小化安装
 
 下载地址：  
 [centosmini下载地址](http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1810.iso)  
@@ -15,7 +15,7 @@ superset是airbnbd开源的BI面板，基于python框架，集成了Flask、D3�
 
 安装过程：
 
-### 2.1 yum更换源
+### yum更换源
 
 参考： [https://www.jianshu.com/p/4aa7b63f9026](https://www.jianshu.com/p/4aa7b63f9026)
 
@@ -28,7 +28,7 @@ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-
 yum makecache
 ```
 
-### 2.2 Miniconda安装
+### Miniconda安装
 
 ```shell
 #获取安装脚本

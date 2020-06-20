@@ -1,7 +1,7 @@
 
-## 一、Ananconda的安装
+## Ananconda的安装
 
-```py
+```python
 #Ananconda的安装
 wget https://repo.continuum.io/archive/Anaconda3-5.3.0-Linux-x86_64.sh
 #安装出错说不能解压的，需要先安装bzip2
@@ -10,18 +10,12 @@ bash Anaconda3-5.3.0-Linux-x86_64.sh
 source ~/.bashrc
 ```
 
-## 二、jupyter的配置
+## jupyter的配置
 
-进入python环境
+进入python环境,获取密码的hash值
 
-```
-#进入python环境
-python #在命令行输入
-```
-
-获取密码的hash值
-
-```
+```python
+>>>python
 #获取密码的hash值
 from notebook.auth import passwd
 passwd()
@@ -31,7 +25,7 @@ exit()
 
 创建一个jupyter notebook的配置文件
 
-```
+```shell
 #创建一个jupyter notebook的配置文件
 jupyter notebook --generate-config #如果提示不建议root使用，加上参数： --allow-root
 #编辑jupyter notebook的配置文件
@@ -42,7 +36,7 @@ jupyter notebook password
 
 配置文件需要更改的条目如下：
 
-```
+```python
 #设置jupyter目录    
 c.NotebookApp.notebook_dir = '/root/jupyter' 
 #设置本地ip为localhost，如果设置为 ‘*’ ，则你可以通过ip直接访问jupyter服务器，对服务器而言相当危险
@@ -57,7 +51,7 @@ c.NtebookApp.password = u'sha1:0fb5073640dc:dbffde50e33812cf21e52fa195c8fda23d3c
 c.NotebookApp.allow_remote_access = True
 ```
 
-## 三、关于NGINX的配置
+## 关于NGINX的配置
 
 我的方案是用nginx反代jupyter notebook 并开启SSL  
 具体操作如下：  
@@ -108,12 +102,23 @@ server {
 }
 ```
 
-## 四、启动jupyter
+## 启动jupyter
 
+root用户：
+
+```shell
+jupyter notebook --allow-root
+```
+
+非root用户：
+
+```shell
+jupyter notebook
+```
 让jupyter在后台运行有很多方法，有空再慢慢补充。  
 此处介绍一种：screen
 
-```
+```shell
 #创建screen mission
 screen -S jupyter
 #进入screen mission
@@ -122,19 +127,7 @@ screen -r jupyter
 screen -ls
 ```
 
-### 启动jupyter：
 
-root用户：
-
-```
-jupyter notebook --allow-root
-```
-
-非root用户：
-
-```
-jupyter notebook
-```
 
 
 

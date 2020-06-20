@@ -361,7 +361,7 @@ SELECT * from DimSalesTerritory;       -- 查询语句
 同时设置where语句限制时间
 
 ```sql
-   WHERE    a.orderdate = from_unixtime( unix_timestamp( ), 'yyyy-MM-dd' )
+   WHERE a.orderdate = from_unixtime( unix_timestamp( ), 'yyyy-MM-dd' )
 ```
 
 2.sh脚本
@@ -381,24 +381,27 @@ hive  -f
    crontab -e    #进入crontab编辑页面
     ```
 
+
     ```shell
-    # crontab时间语法
-    # .---------------- minute (0 - 59) 
-    # |  .------------- hour (0 - 23)
-    # |  |  .---------- day of month (1 - 31)
-    # |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ... 
-    # |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7)  OR
-    #sun,mon,tue,wed,thu,fri,sat 
-    # |  |  |  |  |
-    # *  *  *  *  *  command to be executed
+    crontab时间语法
+    .---------------- minute (0 - 59) 
+    |  .------------- hour (0 - 23)
+    |  |  .---------- day of month (1 - 31)
+    |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ... 
+    |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7)  OR
+    sun,mon,tue,wed,thu,fri,sat 
+    |  |  |  |  |
+    *  *  *  *  *  command to be executed
     ```
     
-    ```
-   # crontab 代码
+
+    ```shell
+    # crontab代码
    0 1 * * * cd /root/adventure_demon/ && ./insert_data_hive_demon.sh  >insert.txt 2>&1 & #每天1点0分执行insert脚本
     ```
     
-    ```
+
+    ```shell
     #crontab服务状态
     sudo service crond start     #启动服务
     sudo service crond stop      #关闭服务
@@ -406,6 +409,7 @@ hive  -f
     sudo service crond reload    #重新载入配置
     sudo service crond status    #查看服务状态
     ```
+
 
 ## powerbi展示数据
 
@@ -539,16 +543,6 @@ hive  -f
 ![设定书签跳转按钮](https://i.loli.net/2019/06/15/5d048ee0a441790776.png)
 
 在编辑模式下，ctrl+单机则可以跳转到我们书签所保存的页面去。
-
-## PowerBI 可视化展示
-
-[adventure时间可视化报告](https://app.powerbi.com/view?r=eyJrIjoiMDVmNDI0NDUtOGI3OS00NDBkLWI4ZDItOWVlOWU5YjYyMWNmIiwidCI6ImJiZDhhYWI5LWUyNTMtNDE3ZS04Njg3LWI3NGU3Y2U3Mjc4NyIsImMiOjN9)
-
-
-[adventure区域销售量可视化](https://app.powerbi.com/view?r=eyJrIjoiNzZiYTQxZTAtZDMyMi00NzI3LWEwMDEtYWNlODVkMmZlZjU2IiwidCI6ImJiZDhhYWI5LWUyNTMtNDE3ZS04Njg3LWI3NGU3Y2U3Mjc4NyIsImMiOjN9)
-
-
-[adventure趋势可视化报告](https://app.powerbi.com/view?r=eyJrIjoiNzZiYTQxZTAtZDMyMi00NzI3LWEwMDEtYWNlODVkMmZlZjU2IiwidCI6ImJiZDhhYWI5LWUyNTMtNDE3ZS04Njg3LWI3NGU3Y2U3Mjc4NyIsImMiOjN9)
 
 
 

@@ -1,13 +1,12 @@
 
-### Header 
+## Header 
 
 ```
 headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'}
 ```
 
 
-
-### 解析方式
+## 解析方式
 
  	1. 直接处理
  	2. json解析
@@ -18,7 +17,7 @@ headers = {'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWe
 
 
 
-### JS渲染问题
+## JS渲染问题
 
 1. 分析Ajax请求
 2. selenium.WebDriver
@@ -35,7 +34,7 @@ print(driver.page_source)
 
 
 
-### 保存数据
+## 保存数据
 
 1. 文本
 

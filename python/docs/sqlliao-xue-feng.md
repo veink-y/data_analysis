@@ -2,7 +2,8 @@
 
 来源：[廖雪峰的SQL教程](https://www.liaoxuefeng.com/wiki/1177760294764384)
 
-## 主键
+## 键
+### 主键
 
 主键是关系表中记录的唯一标识。主键的选取非常重要：主键不要带有业务含义，而应该使用BIGINT自增或者GUID类型。主键也不应该允许`NULL`。可以使用多个列作为联合主键，但联合主键并不常用。
 
@@ -14,7 +15,7 @@ alter table tableName drop primary key;  -- 删除主键
 
 
 
-## 外键
+### 外键
 
 关系数据库通过外键可以实现一对多、多对多和一对一的关系。外键既可以通过数据库来约束，也可以不设置约束，仅依靠应用程序的逻辑来保证。
 
@@ -30,7 +31,7 @@ DROP FOREIGN KEY fk_class_id    -- 删除外键
 DROP COLUMN …       --删除列
 ```
 
-## 索引：优化数据库，提高查询速度
+### 索引：优化数据库，提高查询速度
 
 ```SQL
 ALTER TABLE students            
@@ -56,9 +57,9 @@ ALTER TABLE students
 ADD CONSTRAINT uni_name UNIQUE (name);    -- 添加唯一约束：没有索引，但具有唯一性保证
 ```
 
-# 查询数据
+## 查询数据
 
-## 查询表
+### 查询表
 
 使用SELECT \* FROM students时，SELECT是关键字，表示将要执行一个查询，\*表示“所有列”，FROM表示将要从哪个表查询
 
@@ -75,7 +76,7 @@ SELECT 1 #测试数据库连接
 SELECT 100+200
 ```
 
-## 条件查询
+### 条件查询
 
 ```SQL
 SELECT * FROM students WHERE score >= 80;
@@ -105,7 +106,7 @@ SELECT * FROM students WHERE (score < 80 OR score > 90) AND gender = 'M';
 
 如果不加括号条件运算按照NOT、AND、OR的优先级进行
 
-## 投影查询
+### 投影查询
 
 如果我们只希望返回某些列的数据，而不是所有列的数据，我们可以用SELECT 列1, 列2, 列3 FROM ...，让结果集仅包含指定列。这种操作称为投影查询
 
@@ -115,7 +116,7 @@ SELECT * FROM students WHERE (score < 80 OR score > 90) AND gender = 'M';
 SELECT 列1 别名1, 列2 别名2, 列3 别名3 FROM ...
 ```
 
-## 排序
+### 排序
 
 语法： ORDER BY 列名\(加上DESC表示“倒序”\)
 
@@ -132,7 +133,7 @@ SELECT id, name, gender, score FROM students ORDER BY score DESC, gender;
 
 如果有WHERE子句，那么ORDER BY子句要放到WHERE子句后面
 
-## 分页查询
+### 分页查询
 
 语法
 
@@ -143,7 +144,7 @@ LIMIT <M> OFFSET <N>
 
 LIMIT 15 OFFSET 30还可以简写成LIMIT 30 15
 
-## 聚合搜索
+### 聚合搜索
 
 COUNT  SUM  MAX  MIN  AVG
 
@@ -160,7 +161,7 @@ SELECT class_id, COUNT(*) num FROM students GROUP BY class_id;   #分组聚合�
 SELECT class_id, gender, COUNT(*) num FROM students GROUP BY class_id, gender; #多个分组聚合
 ```
 
-## 多表查询
+### 多表查询
 
 查询结果是列之和，行之积
 
@@ -176,7 +177,7 @@ FROM students s, classes c  #给表名设置别名
 WHERE s.gender = 'M' AND c.id = 1;   #添加where 条件查询
 ```
 
-## 连接查询
+### 连接查询
 
 语法：
 
@@ -216,7 +217,7 @@ LEFT OUTER JOIN则返回左表都存在的行。如果我们给students表增加
 
 FULL OUTER JOIN，它会把两张表的所有记录全部选择出来，并且，自动把对方不存在的列填充为NULL：**（并集）**
 
-# 修改数据
+## 修改数据
 
 关系数据库的基本操作就是增删改查，即CRUD：Create、Retreive、Update、Delete。
 
@@ -226,7 +227,7 @@ FULL OUTER JOIN，它会把两张表的所有记录全部选择出来，并且�
 * UPDATE：更新已有记录；
 * DELETE：删除已有记录
 
-## INSERT
+### INSERT
 
 语法： `INSERT INTO <表名> (字段1, 字段2, ...) VALUES (值1, 值2, ...);`
 
@@ -246,7 +247,7 @@ INSERT INTO students (class_id, name, gender, score) VALUES
 SELECT * FROM students;
 ```
 
-## UPDATE
+### UPDATE
 
 语法：`UPDATE <表名> SET 字段1=值1, 字段2=值2, ... WHERE ...;`
 
@@ -278,7 +279,7 @@ SELECT * FROM students;
 
 _**UPDATE没有添加WHERE条件会更新整个表，最好先用SELECT...WHERE...来确认 筛选出了期望的记录值**_
 
-## DELETE
+### DELETE
 
 语法： `DELETE FROM <表名> WHERE ...;`
 
@@ -294,7 +295,7 @@ SELECT * FROM students;
 
 
 
-# MySQL
+## MySQL
 
 mysql启动：`mysql -u root -p`
 
@@ -306,7 +307,7 @@ MySQL Client的可执行程序是mysql，MySQL Server的可执行程序是mysqld
 
 连接远程MySQL： `mysql -h 10.0.1.99 -u root -p`
 
-## 管理MySQL
+### 管理MySQL
 
 可视化图形界面： MySQL Workbench
 
@@ -391,7 +392,7 @@ CREATE TABLE statistics (
 INSERT INTO statistics (class_id, average) SELECT class_id, AVG(score) FROM students GROUP BY class_id;
 ```
 
-# 事务
+## 事务
 
 把多条语句作为一个整体进行操作的功能，被称为数据库事务。
 
