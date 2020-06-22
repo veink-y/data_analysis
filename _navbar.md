@@ -1,5 +1,5 @@
 - [Home](/python/)
-- [Linux](/linux/)
 - [Mechine Learning](/ml/)
-- [Work](/product/)
+- [Analysis](/analysis/)
+<!-- - [Work](/product/) -->
 <!-- - [Profile](/profile/) -->
