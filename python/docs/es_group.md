@@ -1,6 +1,4 @@
-# ES聚合操作
-
-### 例子：
+## ES聚合操作例子：
 
 ```
 # 求百分比占位的数字
@@ -16,7 +14,7 @@
 }
 ```
 
-### 函数
+## 函数
 
 - max ：最大值
 - min ：最小值
@@ -31,7 +29,7 @@
 
 
 
-### 桶聚合（group by）
+## 桶聚合（group by）
 
 ```
 POST /bank/_search?size=0
@@ -65,7 +63,7 @@ POST /bank/_search?size=0
 
 
 
-### 范围聚合
+## 范围聚合
 
 ```
 POST /bank/_search?size=0
@@ -104,7 +102,7 @@ POST /bank/_search?size=0
 
 
 
-### 时间聚合
+## 时间聚合
 
 ```
 POST /bank/_search?size=0
@@ -130,7 +128,7 @@ POST /bank/_search?size=0
 
 
 
-### 时间直方图
+## 时间直方图
 
 ```
 POST /bank/_search?size=0

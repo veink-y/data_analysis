@@ -1,6 +1,5 @@
-# ES查询操作
 
-### from / size
+## from / size
 
 ```
 POST /movies/_search
@@ -13,7 +12,7 @@ POST /movies/_search
 }
 ```
 
-### sort排序
+## sort排序
 
 ```
 POST /movies/_search
@@ -28,7 +27,7 @@ POST /movies/_search
 }
 ```
 
-### _source 过滤
+## _source 过滤
 
 ```
 POST /movies/_search
@@ -44,7 +43,7 @@ POST /movies/_search
 }
 ```
 
-### 脚本字段
+## 脚本字段
 
 用法： 用于计算
 
@@ -69,7 +68,7 @@ POST /movies/_search
 }
 ```
 
-### match表达式
+## match表达式
 
 ```
 POST /movies/_search
@@ -94,7 +93,7 @@ POST /movies/_search
   }
 ```
 
-### 短语查询
+## 短语查询
 
 1. 使用slop=1来表示中间可以间隔一个单词
 
@@ -112,7 +111,7 @@ POST /movies/_search
 }
 ```
 
-### 返回指定列
+## 返回指定列
 
 ```
 
@@ -127,7 +126,7 @@ POST /movies/_search
 
 ```
 
-### 排序
+## 排序
 
 ```
 POST /kibana_sample_data_flights/_search

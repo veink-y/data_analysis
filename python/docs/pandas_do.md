@@ -1,4 +1,4 @@
-# Pandas 骚操作集锦
+
 
 “”“
 
@@ -8,7 +8,7 @@ column： 列名
 
 ”“”
 
-### Top n 问题
+## Top n 问题
 
 ```python
 df["column1"].groupby(df["column2"]).head(n)  # 求分窗前n
@@ -16,7 +16,7 @@ df["column1"].groupby(df["column2"]).head(n)  # 求分窗前n
 
 
 
-### Groupby 自定义聚合函数
+## Groupby 自定义聚合函数
 
 > 日常操作，自定义聚合函数
 
@@ -29,7 +29,7 @@ df.groupby(["columns"]).agg({"column2":function})
 
 
 
-### 分桶
+## 分桶
 
 > 便捷对数据进行分割为类别
 
@@ -41,7 +41,7 @@ df["column2"] = pd.cut(df["column1"],bins,labels=labels)
 
 
 
-### 分窗排序
+## 分窗排序
 
 > top n 问题
 
@@ -51,10 +51,9 @@ df['row_number'] = df['A'].groupby(df['C']).rank(ascending=True,method='first')
 
 
 
-### 快速重编码替换数据：
+## 快速重编码替换数据：
 
 > 机器学习时快速对类别数据进行数字化编码
->
 > 另一种处理思路是 one-hot 编码 pd.get_dummied
 
 ```python

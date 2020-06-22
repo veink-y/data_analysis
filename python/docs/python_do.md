@@ -1,6 +1,6 @@
-# python 骚操作
 
-### jupyter 自定义魔法命令
+
+## jupyter 自定义魔法命令
 
 ```python
 from IPython.core.magic import (register_line_magic, register_cell_magic,
