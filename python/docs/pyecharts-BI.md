@@ -10,9 +10,14 @@ link: https://pyecharts.org/
 
 ## BI面板设计
 
+图形选择
+
 
 
 ## 代码
 
 
 
+前端：
+
+后端：
