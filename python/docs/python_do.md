@@ -38,3 +38,18 @@ eval：将字符串转化为可执行python语句
 
 dir：列出当前对象的所有属性
 
+## 好玩的自定义函数
+eval:
+```python
+eval('t=5')
+print(t)
+>>> 5
+```
+
+locals:
+
+```python
+locals()['t']=5  # 可用于生成变量
+print(t)
+```
+

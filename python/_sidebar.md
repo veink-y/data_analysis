@@ -6,7 +6,6 @@
   - [Pandas骚操作集锦](/python/docs/pandas_do.md)
   - [Python骚操作](/python/docs/python_do.md)
   - [pip骚操作](/python/docs/pip_do.md)
-  - Pandas 100题目
 
 * SPARK
   * [hdfs/hadoop常用命令](/python/docs/hdfs_hadoop_code.md)
