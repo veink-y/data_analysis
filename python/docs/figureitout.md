@@ -1,9 +1,8 @@
 
 ## 知乎SQL代码无法发布
 
-在知乎发表文章的时候：
 
-\`CONCAT\`和\`FROM\`函数都必须要添加符号“\`”符号
+> \`CONCAT\`和\`FROM\`函数都必须要添加符号“\`”符号
 
 ## Matplotlib中文乱码
 
@@ -34,17 +33,18 @@ plt.rcParams['axes.unicode_minus']=False
 
 ## mysql 外网访问
 
-```
-ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
-```
+参考： 
 
-解决：/etc/my.cnf 下\[mysqld\]后添加 `skip-grant-tables`
+[https://www.jianshu.com/p/1dab9a4d0d5f](https://www.jianshu.com/p/1dab9a4d0d5f)
+
+[https://segmentfault.com/a/1190000015634108](https://segmentfault.com/a/1190000015634108)
 
 ```
-ERROR 1290 (HY000): The MySQL server is running with the --skip-grant-tables option so it cannot execute this statement
+use mysql;
+update user set host='%' where user='root';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%'WITH GRANT OPTION;
+FLUSH PRIVILEGES;
 ```
-
-解决：刷新权限： `flush privileges;`
 
 
 

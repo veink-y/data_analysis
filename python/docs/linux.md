@@ -69,6 +69,6 @@ sudo scutil --set HostName newName
 ### conda 不显示 base
 
 ```shell
-changeps1:False
+conda config set changeps1 False
 ```
 

@@ -16,7 +16,6 @@
   * [linux 操作记录](python/docs/linux.md)
   * [Docker常用命令](python/docs/docker.md)
   * [heroku使用](python/docs/heroku.md)
-  * [centos 安装mysql 并开启远程访问](python/docs/mysql_remote.md)
   * [WSL实践指南](python/docs/wsl.md)
 
 * ES
