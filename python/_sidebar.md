@@ -25,8 +25,8 @@
   * [ES查询操作](/python/docs/es_group.md)
 
 * 可视化
+  * [pyecharts制作BI看板](/python/docs/pyecharts-BI.md)
   * [CentOS安装superset](/python/docs/superset-install.md)
-* [pyecharts制作BI看板](/python/docs/pyecharts-BI.md)
   
 * SQL
   * [SQL基础](/python/docs/sqljichu.md)
