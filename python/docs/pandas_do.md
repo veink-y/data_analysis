@@ -1,18 +1,7 @@
 
-
-“”“
-
-df： dataframe
-
-column： 列名
-
-”“”
-
-## Top n 问题
-
-```python
-df["column1"].groupby(df["column2"]).head(n)  # 求分窗前n
-```
+说明：
+* df： dataframe
+* column： 列名
 
 
 
@@ -27,8 +16,6 @@ def function():
 df.groupby(["columns"]).agg({"column2":function})
 ```
 
-
-
 ## 分桶
 
 > 便捷对数据进行分割为类别
@@ -39,17 +26,17 @@ labels = ["zero","one","two","three","four","five"]
 df["column2"] = pd.cut(df["column1"],bins,labels=labels)
 ```
 
-
-
 ## 分窗排序
-
-> top n 问题
 
 ```python
 df['row_number'] = df['A'].groupby(df['C']).rank(ascending=True,method='first')
 ```
 
+## Top n 问题
 
+```python
+df["column1"].groupby(df["column2"]).head(n)  # 求分窗前n
+```
 
 ## 快速重编码替换数据：
 

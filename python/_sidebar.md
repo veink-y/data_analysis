@@ -1,7 +1,7 @@
 
 * Python 基础
-  - [python读取mysql](/python/docs/pythondu-qu-mysql.md)
-  - [jupyter notebook vps搭建](/python/docs/jupyter-notebook-vpsda-jian.md)
+  - [python连接数据库](/python/docs/python_database.md)
+  - [jupyter notebook vps搭建](/python/docs/jupyter-vpsconfig.md)
   - [爬虫基础](/python/docs/scracp.md)
   - [Pandas骚操作集锦](/python/docs/pandas_do.md)
   - [Python骚操作](/python/docs/python_do.md)

@@ -6,8 +6,6 @@
 wget https://repo.continuum.io/archive/Anaconda3-5.3.0-Linux-x86_64.sh
 #安装出错说不能解压的，需要先安装bzip2
 bash Anaconda3-5.3.0-Linux-x86_64.sh
-#使bashrc生效
-source ~/.bashrc
 ```
 
 ## jupyter的配置
@@ -56,7 +54,7 @@ c.NotebookApp.allow_remote_access = True
 我的方案是用nginx反代jupyter notebook 并开启SSL  
 具体操作如下：  
 在BT-panel新建网站，无需数据库和FTP，填写好域名  
-关于SSL的配置：我采用的SSL for free 的let's encrypt证书，获取到证书后填写到宝塔的其他证书里。此处参考文章：宝塔 Linux 面板手动获取 Let’s Encrypt 免费证书教程  
+关于SSL的配置：我采用的SSL for free 的let's encrypt证书，直接通过文件或者dns完成验证，获取证书
 在配置文件修改成一下代码：
 
 ```
@@ -105,28 +103,27 @@ server {
 ## 启动jupyter
 
 root用户：
-
 ```shell
-jupyter notebook --allow-root
+jupyter notebook --allow-root   # 也可在jupyter_notebook_config.py中设置为允许root运行
 ```
 
 非root用户：
-
 ```shell
 jupyter notebook
 ```
-让jupyter在后台运行有很多方法，有空再慢慢补充。  
-此处介绍一种：screen
-
+## jupyter后台运行
+### screen
 ```shell
 #创建screen mission
 screen -S jupyter
 #进入screen mission
 screen -r jupyter
-#查看jupyter对话
-screen -ls
+jupyter notebook
 ```
-
+### nohup
+```shell
+nohup jupyter notebook &
+```
 
 
 
