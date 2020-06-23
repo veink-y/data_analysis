@@ -370,19 +370,19 @@ SELECT * from DimSalesTerritory;       -- 查询语句
 
 hive  -f
 
-```shell
+```bash
    hive -f /root/adventure_demon/insert_data_hive_demon.sql
 ```
 
 3.crontab 定时任务
 
-    ```shell
+    ```bash
    crontab -l    #查看crontab任务清单
    crontab -e    #进入crontab编辑页面
     ```
 
 
-    ```shell
+    ```bash
     crontab时间语法
     .---------------- minute (0 - 59) 
     |  .------------- hour (0 - 23)
@@ -395,13 +395,13 @@ hive  -f
     ```
     
 
-    ```shell
+    ```bash
     # crontab代码
    0 1 * * * cd /root/adventure_demon/ && ./insert_data_hive_demon.sh  >insert.txt 2>&1 & #每天1点0分执行insert脚本
     ```
     
 
-    ```shell
+    ```bash
     #crontab服务状态
     sudo service crond start     #启动服务
     sudo service crond stop      #关闭服务

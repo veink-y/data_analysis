@@ -611,7 +611,7 @@ def apicall():
 
 ### 启动方法
 
-```shell
+```bash
 gunicorn --bind 0.0.0.0:1234 serve:app
 ```
 

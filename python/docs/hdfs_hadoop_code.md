@@ -1,7 +1,7 @@
 
 ## ls 
 
-```shell
+```bash
 # 查看hdfs根目录
 hdfs dfs -ls /
 
@@ -11,7 +11,7 @@ hdfs dfs -ls /user/zhang
 
 ## du
 
-```shell
+```bash
 hdfs dfs -du /user/zhang
 
 # 将字节自动转化成单位
@@ -20,14 +20,14 @@ hdfs dfs -du -h /user/zhang
 
 ## df
 
-```shell
+```bash
 # 查看根目录磁盘空间
 hdfs dfs -df /
 ```
 
 ## put 
 
-```shell
+```bash
 # 将client node中的NOTICE.txt文件 put 到hdfs的/user/zhang文件夹中
 hdfs dfs -put NOTICE.txt /user/zhang
 
@@ -37,7 +37,7 @@ hdfs dfs -put -f NOTICE.txt /user/zhang
 
 ## get
 
-```shell
+```bash
 # 获取hdfs中的/user/zhang/test/README.txt.gz文件，到client node当前目录
 
 hdfs dfs -get /user/zhang/test/README.txt.gz
@@ -47,7 +47,7 @@ hdfs dfs -get /user/zhang/test/README.txt.gz
 
 ## copyFromLocal
 
-```shell
+```bash
 # 这个命令和put作用相同
 hdfs dfs -copyFromLocal LICENSE.txt /user/zhang
 
@@ -56,7 +56,7 @@ hdfs dfs -copyFromLocal LICENSE.txt /user/zhang
 
 ## opyToLocal 
 
-```shell
+```bash
 # 复制hdfs的/user/zhang/test/README.txt文件到client node当前目录
 hdfs dfs -copyToLocal /user/zhang/test/README.txt
 
@@ -67,21 +67,21 @@ hdfs dfs -copyToLocal /user/zhang/test/README.txt /指定目录
 
 ## cp
 
-```shell
+```bash
 # 将/user/zhang/NOTICE.txt 复制到 /user/zhang/test目录
 hdfs dfs -cp /user/zhang/NOTICE.txt /user/zhang/test
 ```
 
 ## mkdir
 
-```shell
+```bash
 # 创建一个abc目录
 hdfs dfs -mkdir /user/zhang/abc
 ```
 
 ## rm
 
-```shell
+```bash
 # 删除/user/zhang/NOTICE.txt文件
 hdfs dfs -rm /user/zhang/NOTICE.txt
 
@@ -91,27 +91,27 @@ hdfs dfs -rm -r /user/zhang/abc
 
 ## rmdir
 
-```shell
+```bash
 # 删除/user/zhang/demo目录
 hdfs dfs rmdir /user/zhang/demo
 ```
 
 ## cat 命令
 
-```shell
+```bash
 # 查看文件
 hdfs dfs -cat /user/zhang/test/README.txt
 ```
 
 ## tail
 
-```shell
+```bash
 hdfs dfs -tail /user/zhang/test/README.txt
 ```
 
 ## mv
 
-```shell
+```bash
 hdfs dfs -mv /user/zhang/test /user/zhang/test2
 ```
 

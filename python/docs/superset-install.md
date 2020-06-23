@@ -19,7 +19,7 @@ superset是airbnbd开源的BI面板，基于python框架，集成了Flask、D3�
 
 参考： [https://www.jianshu.com/p/4aa7b63f9026](https://www.jianshu.com/p/4aa7b63f9026)
 
-```shell
+```bash
 #备份
 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
 #centos7源
@@ -30,7 +30,7 @@ yum makecache
 
 ### Miniconda安装
 
-```shell
+```bash
 #获取安装脚本
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 #安装出错说不能解压的，需要先安装bzip2
@@ -41,7 +41,7 @@ source ~/.bashrc
 
 ### conda更换源
 
-```shell
+```bash
 #清华源
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
@@ -52,7 +52,7 @@ conda config --set show_channel_urls yes
 
 暂时修改
 
-```shell
+```bash
 pip install package名字 -i https://pypi.tuna.tsinghua.edu.cn/simple/
 ```
 
@@ -60,7 +60,7 @@ pip install package名字 -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
 修改 vim ~/.pip/pip.conf 文件，内容如下
 
-```shell
+```bash
 [global]
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
@@ -69,7 +69,7 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 
 ### 虚拟环境的创建
 
-```shell
+```bash
 # 创建superset虚拟环境
 conda create -n superset python=3.6
 # 激活superset 环境
@@ -82,7 +82,7 @@ conda remove -n py36 --all
 
 ### 依赖安装
 
-```shell
+```bash
 yum install gcc libffi-devel python-devel openssl-devel
 yum install gcc-c++
 yum install gcc-c++ python-devel.x86_64 cyrus-sasl-devel.x86_64
@@ -90,7 +90,7 @@ yum install gcc-c++ python-devel.x86_64 cyrus-sasl-devel.x86_64
 
 ### pip安装
 
-```shell
+```bash
 pip install superset
 ```
 
@@ -98,7 +98,7 @@ pip install superset
 
 创建管理员用户
 
-```shell
+```bash
 fabmanager create-admin --app superset  
 # 此处报错cannot import name '_maybe_box_datetimelike'，安装pandas0.23.4
 # ps：对应版本号为superset-0.28.1
@@ -108,7 +108,7 @@ fabmanager create-admin --app superset
 
 初始化数据源
 
-```shell
+```bash
 superset db upgrade   #此处失败则无法显示superset看板界面
 
 superset load_examples 
@@ -120,14 +120,14 @@ superset init
 
 1.superset-0.28.1版本支持的pandas支持版本为0.23.4
 
-```shell
+```bash
 pip uninstall pandas
 pip install pandas==0.23.4
 ```
 
 2.superset db upgrade失败的话，需要降级sqlalchemy
 
-```shell
+```bash
 pip uninstall sqlalchemy
 pip install sqlalchemy==1.2
 superset db upgrade
@@ -137,7 +137,7 @@ superset db upgrade
 
 ### 运行superset
 
-```shell
+```bash
 superset runserver
 ```
 
@@ -147,7 +147,7 @@ superset runserver
 
 如果无法打开，需要打开端口，或者关闭centos防火墙
 
-```shell
+```bash
 #关闭防火墙
 systemctl stop firewalld
 
@@ -161,7 +161,7 @@ firewall-cmd --zone=public --list-ports
 
 ### 连接mysql数据库
 
-```shell
+```bash
 # 安装mysqlclient
 pip install mysqlclient
 # 安装pymysql
@@ -174,7 +174,7 @@ conda install pymysql
 
 ### 连接Hive数据库
 
-```shell
+```bash
 #安装pyhive
 conda install pyhive
 ```

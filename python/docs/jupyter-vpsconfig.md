@@ -23,7 +23,7 @@ exit()
 
 创建一个jupyter notebook的配置文件
 
-```shell
+```bash
 #创建一个jupyter notebook的配置文件
 jupyter notebook --generate-config #如果提示不建议root使用，加上参数： --allow-root
 #编辑jupyter notebook的配置文件
@@ -103,17 +103,17 @@ server {
 ## 启动jupyter
 
 root用户：
-```shell
+```bash
 jupyter notebook --allow-root   # 也可在jupyter_notebook_config.py中设置为允许root运行
 ```
 
 非root用户：
-```shell
+```bash
 jupyter notebook
 ```
 ## jupyter后台运行
 ### screen
-```shell
+```bash
 #创建screen mission
 screen -S jupyter
 #进入screen mission
@@ -121,7 +121,7 @@ screen -r jupyter
 jupyter notebook
 ```
 ### nohup
-```shell
+```bash
 nohup jupyter notebook &
 ```
 

@@ -43,7 +43,7 @@ WSL>>>Windows Subsystem for Linux
 
 WSL中，windows本身目录挂载在 /mnt 下，无需额外再挂载，但是大部分时候并不太方便
 
-```shell
+```bash
 ln -s /mnt/d/jupyter jupyter
 ```
 

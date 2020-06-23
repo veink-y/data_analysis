@@ -1,6 +1,6 @@
 ## 上传本地文件到vps：
 
-```
+```bash
 #上传文件
 scp  本地文件 root@ip:vps目录
 #eg： 
@@ -13,11 +13,14 @@ scp -r 本地文件夹 root@ip:vps目录
 scp -r /Users/vein/OneDrive/jupyter/adventure3/adventure_new_noheadr/ root@101.132.108.116:/root/adventure_demon/
 ```
 
-
+## github不输入密码
+```bash
+git config --global credential.helper store
+```
 
 ## pip更换源
 
-```shell
+```bash
 cd $HOME  
 mkdir .pip  
 cd .pip
@@ -36,7 +39,7 @@ timeout = 6000
 
 ## ubuntu常用命令
 
-```shell
+```bash
 sudo apt-get update  更新源
 sudo apt-get install package 安装包
 sudo apt-get remove package 删除包
@@ -59,7 +62,7 @@ sudo apt-get check 检查是否有损坏的依赖
 
 ## mac更换计算机名
 
-```shell
+```bash
 sudo scutil --set HostName newName 
 # newName 为新名字
 ```
@@ -68,7 +71,7 @@ sudo scutil --set HostName newName
 
 ### conda 不显示 base
 
-```shell
+```bash
 conda config set changeps1 False
 ```
 
