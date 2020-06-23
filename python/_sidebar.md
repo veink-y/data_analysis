@@ -26,7 +26,8 @@
 
 * 可视化
   * [CentOS安装superset](/python/docs/superset-install.md)
-
+* [pyecharts制作BI看板](/python/docs/pyecharts-BI.md)
+  
 * SQL
   * [SQL基础](/python/docs/sqljichu.md)
   * [MySQL-廖雪峰](/python/docs/sqlliao-xue-feng.md)
