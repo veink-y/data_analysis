@@ -12,12 +12,12 @@
   * pyspark DataFrame常用
   
 * linux
-  * [问题解决记录](linux/docs/wen-ti-jie-jue-ji-lu.md)
-  * [linux 操作记录](linux/docs/linux.md)
-  * [Docker常用命令](linux/docs/docker.md)
-  * [heroku使用](linux/docs/heroku.md)
-  * [centos 安装mysql 并开启远程访问](linux/docs/mysql_remote.md)
-  * [WSL实践指南](linux/docs/wsl.md)
+  * [问题解决记录](python/docs/wen-ti-jie-jue-ji-lu.md)
+  * [linux 操作记录](python/docs/linux.md)
+  * [Docker常用命令](python/docs/docker.md)
+  * [heroku使用](python/docs/heroku.md)
+  * [centos 安装mysql 并开启远程访问](python/docs/mysql_remote.md)
+  * [WSL实践指南](python/docs/wsl.md)
 
 * ES
   * [ES索引操作](/python/docs/es_index.md)
