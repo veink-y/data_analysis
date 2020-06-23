@@ -26,17 +26,15 @@ jupyter 启动前会运行的文件位置：
 
 使用魔法命令进行 pyspark 环境配置：
 
+
+
 pyspark导入：
 
 
 
-
-
-神奇的内置函数：
-
 eval：将字符串转化为可执行python语句
 
-dir：列出当前对象的所有属性
+
 
 ## 好玩的自定义函数
 eval:
@@ -51,5 +49,11 @@ locals:
 ```python
 locals()['t']=5  # 可用于生成变量
 print(t)
+```
+
+dir:
+
+```python
+dir(t) ##列出当前变量可使用的方法，jupyter使用方便
 ```
 
