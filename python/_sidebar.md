@@ -12,7 +12,7 @@
   * pyspark DF常用方法
   
 * linux
-  * [问题解决记录](python/docs/wen-ti-jie-jue-ji-lu.md)
+  * [问题解决记录](python/docs/figureitout.md)
   * [linux 操作记录](python/docs/linux.md)
   * [Docker常用命令](python/docs/docker.md)
   * [heroku使用](python/docs/heroku.md)
