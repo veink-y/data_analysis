@@ -23,7 +23,7 @@ jobs:
         port: 22
         rm: 1
         source: "./*"
-        target: "/www/wwwroot/vein.ink"
+        target: "/www/wwwroot/vein/"
 
     # - name: deploy file
     #     uses: wlixcc/SFTP-Deploy-Action@v1.0
