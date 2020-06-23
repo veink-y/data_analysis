@@ -9,7 +9,7 @@
 
 * SPARK
   * [hdfs/hadoop常用命令](/python/docs/hdfs_hadoop_code.md)
-  * pyspark DataFrame常用
+  * pyspark DF常用方法
   
 * linux
   * [问题解决记录](python/docs/wen-ti-jie-jue-ji-lu.md)
@@ -25,7 +25,7 @@
   * [ES查询操作](/python/docs/es_group.md)
 
 * 可视化
-  * [CentOS 安装superset](/python/docs/superset-install.md)
+  * [CentOS安装superset](/python/docs/superset-install.md)
 
 * SQL
   * [SQL基础](/python/docs/sqljichu.md)

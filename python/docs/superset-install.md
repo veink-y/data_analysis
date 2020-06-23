@@ -3,7 +3,7 @@
 
 superset是airbnbd开源的BI面板，基于python框架，集成了Flask、D3、Pandas、SqlAlchemy等框架。
 
-如果不想看教程，现成虚拟机提供给你：
+现成虚拟机：
 
 下载链接： [https://share.weiyun.com/51VMwBe](https://share.weiyun.com/51VMwBe)  密码：dahpkn
 
