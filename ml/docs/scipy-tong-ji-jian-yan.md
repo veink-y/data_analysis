@@ -5,7 +5,7 @@
 
 检验样本是否具有高斯分布
 
-```py
+```python
 from scipy.stats import shapiro
 data = [21,12,12,23,19,13,20,17,14,19]
 stat,p = shapiro(data)
@@ -26,7 +26,7 @@ print("stat为：%f" %stat,"p值为：%f" %p)
 * 每个样本的观察都是正态分布的
 * 每个样本的观察具有相同的方差
 
-```py
+```python
 from scipy.stats import pearsonr
 data1 = [21,12,12,23,19,13,20,17,14,19]
 data2 = [12,11,8,9,10,15,16,17,10,16]
@@ -43,7 +43,7 @@ print("corr为：%f" %corr,"p值为：%f" %p)
 * 用于计算列联表的观察是独立的
 * 列联表的每个单元格中有25个或更多个实例
 
-```py
+```python
 from scipy.stats import chi2_contingency
 data1 = [21,12,12,23,19,13,20,17,14,19]
 data2 = [12,11,8,9,10,15,16,17,10,16]
@@ -65,7 +65,7 @@ print("stat为：%f" %stat,"p值为：%f" %p)
 * 每个样本的观察都是正态分布的
 * 每个样本中的观察具有相同的方差
 
-```py
+```python
 from scipy.stats import ttest_ind
 data1 = [21,12,12,23,19,13,20,17,14,19]
 data2 = [12,11,8,9,10,15,16,17,10,16]
@@ -84,7 +84,7 @@ print("stat为：%f" %stat,"p值为：%f" %p)
 
 检验两个配对样本的均值是否存在显著差异
 
-```py
+```python
 from scipy.stats import ttest_rel
 data1 = [21,12,12,23,19,13,20,17,14,19]
 data2 = [12,11,8,9,10,15,16,17,10,16]
@@ -104,7 +104,7 @@ print("stat为：%f" %stat,"p值为：%f" %p)
 
 * 每个样本中的观察具有相同的方差
 
-```py
+```python
 from scipy.stats import f_oneway
 data1 = [21,12,12,23,19,13,20,17,14,19]
 data2 = [12,11,8,9,10,15,16,17,10,16]
@@ -123,7 +123,7 @@ print("stat为：%f" %stat,"p值为：%f" %p)
 * 每个样本中的观察是独立同分布的
 * 可以对每个样本中的观察进行排序
 
-```py
+```python
 from scipy.stats import mannwhitneyu
 data1 = [21,12,12,23,19,13,20,17,14,19]
 data2 = [12,11,8,9,10,15,16,17,10,16]
@@ -140,7 +140,7 @@ print("stat为：%f" %stat,"p值为：%f" %p)
 * 每个样本中的观察是独立同分布
 * 可以对每个样本中的观察进行排序
 
-```py
+```python
 from scipy.stats import wilcoxon
 data1 = [21,12,12,23,19,13,20,17,14,19]
 data2 = [12,11,8,9,10,15,16,17,10,16]
@@ -157,7 +157,7 @@ print("stat为：%f" %stat,"p值为：%f" %p)
 * 每个样本中的观察是独立同分布的
 * 可以对每个样本中的观察进行排序
 
-```py
+```python
 from scipy.stats import kruskal
 data1 = [21,12,12,23,19,13,20,17,14,19]
 data2 = [12,11,8,9,10,15,16,17,10,16]

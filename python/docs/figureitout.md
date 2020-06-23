@@ -8,7 +8,7 @@
 
 查看支持字体
 
-```py
+```python
 from matplotlib.font_manager import FontManager
 fm = FontManager()
 mat_fonts = set(f.name for f in fm.ttflist)
@@ -17,7 +17,7 @@ print (mat_fonts)
 
 Mac
 
-```py
+```python
 import matplotlib.pyplot as plt
 plt.rcParams['font.sans-serif'] = ['Arial Unicode MS']
 plt.rcParams['axes.unicode_minus']=False​
@@ -25,7 +25,7 @@ plt.rcParams['axes.unicode_minus']=False​
 
 Windwos：
 
-```py
+```python
 import matplotlib.pyplot as plt
 plt.rcParams['font.sans-serif'] = ['SimHei']
 plt.rcParams['axes.unicode_minus']=False

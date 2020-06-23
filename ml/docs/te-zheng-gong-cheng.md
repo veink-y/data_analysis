@@ -1,6 +1,6 @@
 ## One-hot编码
 
-```py
+```python
 pandas.get_dummies(data)
 ```
 
