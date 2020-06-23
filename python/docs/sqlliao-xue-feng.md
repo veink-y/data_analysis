@@ -21,7 +21,7 @@ alter table tableName drop primary key;  -- 删除主键
 
 多对多：通过设立中间表实现
 
-```SQL
+```sql
 ALTER TABLE students           -- 修改表
 ADD CONSTRAINT fk_class_id      -- 外键约束的名称
 FOREIGN KEY (class_id)        -- 外键列
@@ -33,7 +33,7 @@ DROP COLUMN …       --删除列
 
 ### 索引：优化数据库，提高查询速度
 
-```SQL
+```sql
 ALTER TABLE students            
 ADD INDEX idx_score (score);    -- 创建名为idx_score使用score列的索引
 
@@ -45,14 +45,14 @@ ADD INDEX idx_name_score (name, score);   -- 多列索引
 
 添加唯一索引
 
-```SQL
+```sql
 ALTER TABLE students
 ADD UNIQUE INDEX uni_name (name);    -- 添加唯一索引主键
 ```
 
 唯一约束：没有索引，但具有唯一性保证
 
-```SQL
+```sql
 ALTER TABLE students
 ADD CONSTRAINT uni_name UNIQUE (name);    -- 添加唯一约束：没有索引，但具有唯一性保证
 ```
@@ -63,7 +63,7 @@ ADD CONSTRAINT uni_name UNIQUE (name);    -- 添加唯一约束：没有索引�
 
 使用SELECT \* FROM students时，SELECT是关键字，表示将要执行一个查询，\*表示“所有列”，FROM表示将要从哪个表查询
 
-```SQL
+```sql
 SELECT * FROM <表名> # *号可以替换为列名
 SELECT 1 #测试数据库连接
 ```
@@ -72,25 +72,25 @@ SELECT 1 #测试数据库连接
 
 计算表达式
 
-```SQL
+```sql
 SELECT 100+200
 ```
 
 ### 条件查询
 
-```SQL
+```sql
 SELECT * FROM students WHERE score >= 80;
 ```
 
 WHERE 后跟随条件
 
-```SQL
+```sql
 SELECT * FROM <表名> WHERE <条件表达式> #条件查询语法
 ```
 
 选择多个条件
 
-```SQL
+```sql
 <条件1> AND <条件2>
 <条件1> OR <条件2>
 NOT <条件>
@@ -100,7 +100,7 @@ NOT class\_id = 2其实等价于class\_id &lt;&gt; 2
 
 要组合三个或者更多的条件，就需要用小括号\(\)表示如何进行条件运算。eg：
 
-```SQL
+```sql
 SELECT * FROM students WHERE (score < 80 OR score > 90) AND gender = 'M';
 ```
 
@@ -112,7 +112,7 @@ SELECT * FROM students WHERE (score < 80 OR score > 90) AND gender = 'M';
 
 投影查询别名
 
-```SQL
+```sql
 SELECT 列1 别名1, 列2 别名2, 列3 别名3 FROM ...
 ```
 
@@ -120,14 +120,14 @@ SELECT 列1 别名1, 列2 别名2, 列3 别名3 FROM ...
 
 语法： ORDER BY 列名\(加上DESC表示“倒序”\)
 
-```SQL
+```sql
 SELECT id, name, gender, score FROM students ORDER BY score;
 SELECT id, name, gender, score FROM students ORDER BY score DESC;
 ```
 
 进一步排序：
 
-```SQL
+```sql
 SELECT id, name, gender, score FROM students ORDER BY score DESC, gender;
 ```
 
@@ -137,7 +137,7 @@ SELECT id, name, gender, score FROM students ORDER BY score DESC, gender;
 
 语法
 
-```SQL
+```sql
 LIMIT <M> OFFSET <N>
  #M填最多显示数量、N填起始位置（此处从0开始计算位置）
 ```
@@ -165,7 +165,7 @@ SELECT class_id, gender, COUNT(*) num FROM students GROUP BY class_id, gender; #
 
 查询结果是列之和，行之积
 
-```SQL
+```sql
 SELECT
     s.id sid,    #给列名设置别名防止列名重复
     s.name,
@@ -191,7 +191,7 @@ WHERE s.gender = 'M' AND c.id = 1;   #添加where 条件查询
 
 eg： 内连接
 
-```SQL
+```sql
 SELECT s.id, s.name, s.class_id, c.name class_name, s.gender, s.score
 FROM students s             #确定主表
 INNER JOIN classes c        #确定需要连接的表
@@ -200,7 +200,7 @@ ON s.class_id = c.id;        #确定连接条件
 
 eg：外连接
 
-```SQL
+```sql
 SELECT s.id, s.name, s.class_id, c.name class_name, s.gender, s.score
 FROM students s
 RIGHT OUTER JOIN classes c
@@ -233,13 +233,13 @@ FULL OUTER JOIN，它会把两张表的所有记录全部选择出来，并且�
 
 eg：
 
-```SQL
+```sql
 INSERT INTO students (class_id, name, gender, score) VALUES (2, '大牛', 'M', 80);
 -- 查询并观察结果:
 SELECT * FROM students;
 ```
 
-```SQL
+```sql
 INSERT INTO students (class_id, name, gender, score) VALUES
   (1, '大宝', 'M', 87),
   (2, '二宝', 'M', 81);      -- 一次性添加多条记录
@@ -253,7 +253,7 @@ SELECT * FROM students;
 
 eg：
 
-```SQL
+```sql
 UPDATE students SET name='大牛', score=66 WHERE id=1;
 -- 查询并观察结果:  id=1 代表需要更新的行
 SELECT * FROM students WHERE id=1;
@@ -261,7 +261,7 @@ SELECT * FROM students WHERE id=1;
 
 UPDATE语句的WHERE条件和SELECT语句的WHERE条件其实是一样的，因此完全可以一次更新多条记录：eg：
 
-```SQL
+```sql
 UPDATE students SET name='小牛', score=77 WHERE id>=5 AND id<=7;
 --选择不同的行
 SELECT * FROM students;
@@ -269,7 +269,7 @@ SELECT * FROM students;
 
 在UPDATE语句中，更新字段时可以使用表达式。
 
-```SQL
+```sql
 UPDATE students SET score=score+10 WHERE score<80;
 -- 查询并观察结果: -- 例如，把所有80分以下的同学的成绩加10分：
 SELECT * FROM students;
@@ -285,7 +285,7 @@ _**UPDATE没有添加WHERE条件会更新整个表，最好先用SELECT...WHERE.
 
 eg：
 
-```SQL
+```sql
 DELETE FROM students WHERE id=1;
 -- 查询并观察结果:
 SELECT * FROM students;
@@ -335,7 +335,7 @@ information\_schema、mysql、performance\_schema和sys是系统库，不要去�
 
 修改表：
 
-```SQL
+```sql
 `ALTER TABLE students ADD COLUMN birth VARCHAR(10) NOT NULL;
 --给students表新增一列birth
 ALTER TABLE students CHANGE COLUMN birth birthday VARCHAR(20) NOT NULL;
@@ -348,7 +348,7 @@ ALTER TABLE students DROP COLUMN birthday;
 
 插入或替换
 
-```SQL
+```sql
 REPLACE INTO students (id, class_id, name, gender, score) VALUES (1, 1, '小明', 'F', 99);
 --若id=1的记录不存在，REPLACE语句将插入新记录，否则，当前id=1的记录将被删除，然后再插入新记录。
 ```
@@ -357,7 +357,7 @@ REPLACE INTO students (id, class_id, name, gender, score) VALUES (1, 1, '小明'
 
 语法： `INSERT INTO ... ON DUPLICATE KEY UPDATE ...`
 
-```SQL
+```sql
 INSERT INTO students (id, class_id, name, gender, score) VALUES (1, 1, '小明', 'F', 99) ON DUPLICATE KEY UPDATE name='小明', gender='F', score=99;
 --若id=1的记录不存在，INSERT语句将插入新记录，否则，当前id=1的记录将被更新，更新的字段由UPDATE指定。
 ```
@@ -366,21 +366,21 @@ INSERT INTO students (id, class_id, name, gender, score) VALUES (1, 1, '小明',
 
 语法：`INSERT IGNORE INTO ...`
 
-```SQL
+```sql
 INSERT IGNORE INTO students (id, class_id, name, gender, score) VALUES (1, 1, '小明', 'F', 99);
 --若id=1的记录不存在，INSERT语句将插入新记录，否则，不执行任何操作。
 ```
 
 快照：复制一份当前表的数据到一个新表
 
-```SQL
+```sql
 -- 对class_id=1的记录进行快照，并存储为新表students_of_class1:
 CREATE TABLE students_of_class1 SELECT * FROM students WHERE class_id=1;
 ```
 
 写入查询结果集
 
-```SQL
+```sql
 --创建一个统计成绩的表statistics，记录各班的平均成绩：
 CREATE TABLE statistics (
     id BIGINT NOT NULL AUTO_INCREMENT,
@@ -400,7 +400,7 @@ INSERT INTO statistics (class_id, average) SELECT class_id, AVG(score) FROM stud
 
 要手动把多条SQL语句作为一个事务执行，使用`BEGIN`开启一个事务，使用`COMMIT`提交一个事务，这种事务被称为\*`显式事务`\*
 
-```SQL
+```sql
 BEGIN;
 UPDATE accounts SET balance = balance - 100 WHERE id = 1;
 UPDATE accounts SET balance = balance + 100 WHERE id = 2;
