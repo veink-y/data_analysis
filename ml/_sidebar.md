@@ -9,6 +9,6 @@
 * keras
   * 最简使用教程
 * pytorch
-  * 训练流程
+  * 最简入门
 * 统计学
   * [scipy统计检验](/ml/docs/scipy-tong-ji-jian-yan.md)
