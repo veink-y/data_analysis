@@ -3,7 +3,7 @@
   
   * [数据分析框架概览](analysis/docs/dataFrame.md)
   * [秦路-业务分析 笔记](analysis/docs/qinlu.md)
-* [数据分析模型](analysis/docs/data_analystic.md)
+  * [数据分析模型](analysis/docs/data_analystic.md)
   * [AB测试](analysis/docs/ab_test.md)
 * 项目
   * [AdventureWorksCycles Hive/PowerBI可视化](analysis/docs/adventure-works-cycle.md)
