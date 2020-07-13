@@ -21,7 +21,8 @@
 * ES
   * [ES索引操作](/python/docs/es_index.md)
   * [ES查询操作](/python/docs/es_search.md)
-  * [ES查询操作](/python/docs/es_group.md)
+  * [ES聚合操作](/python/docs/es_group.md)
+  * [ES修改与更新](/python/docs/es_update.md)
 
 * 可视化
   * [pyecharts制作BI看板](/python/docs/pyecharts-BI.md)
