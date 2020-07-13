@@ -4,9 +4,9 @@ POST /index/_update_by_query
 {
   "query": {
     "match_all": {}
-  }, // 条件
+  },    // 条件查询
   "script": {
       "inline":"ctx._source.remove(\"some_column\") "
-} //删除some_column这个字段
+}   //删除some_column这个字段
 }
 ```
