@@ -3,8 +3,7 @@
 ## 安装
 
 link： https://www.postgresql.org/download/
-
-
+参考教程： https://www.postgresqltutorial.com/
 
 ## 常用命令
 
