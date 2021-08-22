@@ -24,10 +24,11 @@ link： https://www.postgresql.org/download/
 \conninfo           列出当前数据库和连接的信息。
 ```
 
-### 新建用户
+### 用户相关
 
 ```
 CREATE USER dbuser WITH PASSWORD 'password';
+\password dbuser  修改密码
 ```
 
 ### 切换不同模式
