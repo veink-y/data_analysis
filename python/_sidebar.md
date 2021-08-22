@@ -29,6 +29,7 @@
   * [CentOS安装superset](/python/docs/superset-install.md)
   
 * SQL
+  * [postgresql操作指南](/python/docs/postgresql.md)
   * [SQL基础](/python/docs/sqljichu.md)
   * [MySQL-廖雪峰](/python/docs/sqlliao-xue-feng.md)
   * [MySQL创建表](/python/docs/sql_table.md)
