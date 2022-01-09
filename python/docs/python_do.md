@@ -34,7 +34,10 @@ pyspark导入：
 
 eval：将字符串转化为可执行python语句
 
-
+## conda 初始化powershell
+```shell
+conda init powershell
+```
 
 ## 好玩的自定义函数
 eval:
