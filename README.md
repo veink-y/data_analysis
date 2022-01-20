@@ -19,6 +19,8 @@
 email ： 
 
 ## update记录：
+2022/01/20 部署到leancloud
+
 2020/06/16 搬运gitbook到docsify
 
 2019/10/04 增加wsl与python结合玩法
